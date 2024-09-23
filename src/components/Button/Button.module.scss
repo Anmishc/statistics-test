@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  border: 1px solid $color-button-border;
+  background-color: $color-button-background;
+  color: $color-button-text;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  margin: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &:hover {
+    background-color: $color-button-hover-background;
+    color: $color-button-hover-text;
+    border-color: $color-button-border;
+  }
+
+  &:active {
+    background-color: $color-button-active-background;
+    color: $color-button-hover-text;
+  }
+
+  &:disabled {
+    background-color: $color-button-disabled-background;
+    cursor: not-allowed;
+    color: $color-button-text-disabled;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .spinner {
+    border: 2px solid transparent;
+    border-top: 2px solid #514f4f;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    right: 5px;
+  }
+}

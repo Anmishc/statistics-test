@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.stats {
+  padding: 20px;
+  border: 1px solid $color-border;
+  background-color: $color-background;
+  color: $color-text-primary;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+
+  p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: $color-text-secondary;
+    padding: 10px;
+    border-bottom: 1px solid $color-background-highlight;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    span {
+      font-weight: bold;
+      color: $color-accent;
+    }
+  }
+}

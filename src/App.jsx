@@ -65,11 +65,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Котировки с биржи</h1>
-        <Button onClick={handleStartSocket} label="Старт" disabled={isConnected} isLoading={isLoading} />
-        <Button onClick={handleStopSocket} label="Стоп" disabled={!isConnected} />
-        <Button onClick={handleStats} label="Статистика" disabled={!hasData} />
-        <Button onClick={handleClearDb} label="Очистить" disabled={!hasData} />
+      <h1>Quotes from the stock exchange</h1>
+        <Button onClick={handleStartSocket} label="Start" disabled={isConnected} isLoading={isLoading} />
+        <Button onClick={handleStopSocket} label="Stop" disabled={!isConnected} />
+        <Button onClick={handleStats} label="Statistics" disabled={!hasData} />
+        <Button onClick={handleClearDb} label="Clear" disabled={!hasData} />
         <Stats stats={stats} />
     </div>
   );
